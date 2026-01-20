@@ -18,7 +18,6 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_centralwidget_customContextMenuRequested(const QPoint &pos);
 
 private:
     Ui::MainWindow *ui;
