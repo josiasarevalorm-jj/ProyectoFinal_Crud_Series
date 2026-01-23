@@ -17,7 +17,19 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_btnAgregar_clicked();
+
+    void on_btnMostrar_clicked();
+
+    void on_btnActualizar_clicked();
+
+    void on_btnBuscar_clicked();
+
+    void on_btnEliminar_clicked();
+
 private:
     Ui::MainWindow *ui;
+
 };
 #endif // MAINWINDOW_H

@@ -6,20 +6,138 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>317</width>
+    <height>227</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btnAgregar">
+    <property name="geometry">
+     <rect>
+      <x>22</x>
+      <y>22</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: #2426AE;
+font-weight: bold;
+</string>
+    </property>
+    <property name="text">
+     <string>Agregar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnMostrar">
+    <property name="geometry">
+     <rect>
+      <x>22</x>
+      <y>52</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: #2426AE;
+font-weight: bold;
+</string>
+    </property>
+    <property name="text">
+     <string>Mostrar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnActualizar">
+    <property name="geometry">
+     <rect>
+      <x>22</x>
+      <y>82</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: #2426AE;
+font-weight: bold;
+</string>
+    </property>
+    <property name="text">
+     <string>Actualizar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnBuscar">
+    <property name="geometry">
+     <rect>
+      <x>22</x>
+      <y>112</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: #2426AE;
+font-weight: bold;
+</string>
+    </property>
+    <property name="text">
+     <string>Buscar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnEliminar">
+    <property name="geometry">
+     <rect>
+      <x>22</x>
+      <y>142</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: #2426AE;
+font-weight: bold;
+</string>
+    </property>
+    <property name="text">
+     <string>Eliminar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>0</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>GESTION DE SERIES</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>317</width>
      <height>21</height>
     </rect>
    </property>

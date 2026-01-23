@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VentanaActualizar</class>
+ <widget class="QDialog" name="VentanaActualizar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>507</width>
+    <height>243</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>20</y>
+     <width>181</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>VENTANA DE ACTUALIZAR SERIE</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>31</x>
+     <y>51</y>
+     <width>105</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nombre de la serie: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>142</y>
+     <width>97</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Temporada actual:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>172</y>
+     <width>86</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Episodio actual: </string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtNombre">
+   <property name="geometry">
+    <rect>
+     <x>161</x>
+     <y>51</y>
+     <width>181</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Nombre de la serie a actualizar</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinTemActual">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>143</y>
+     <width>39</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>112</y>
+     <width>38</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Estado:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmbEstado">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>113</y>
+     <width>141</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>-1</number>
+   </property>
+   <property name="placeholderText">
+    <string>Selecione una opcion</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Pendiente</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Viendo</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Acabada</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QSpinBox" name="spinEpActual">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>170</y>
+     <width>39</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnActualizar">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>140</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Actualizar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnBuscar">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>50</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Buscar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnVover">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>180</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Volver</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

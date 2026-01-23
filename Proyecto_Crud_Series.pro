@@ -10,15 +10,33 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    ventanaactualizar.cpp \
+    ventanaagregar.cpp \
+    ventanabuscar.cpp \
+    ventanaeliminar.cpp \
+    ventanamostrar.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    ventanaactualizar.h \
+    ventanaagregar.h \
+    ventanabuscar.h \
+    ventanaeliminar.h \
+    ventanamostrar.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    ventanaactualizar.ui \
+    ventanaagregar.ui \
+    ventanabuscar.ui \
+    ventanaeliminar.ui \
+    ventanamostrar.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    .gitignore
