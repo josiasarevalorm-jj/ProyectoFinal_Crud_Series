@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ventanaMostrar</class>
+ <widget class="QDialog" name="ventanaMostrar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>624</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>20</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>VENTANA DE MOSTRAR</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tablaMostrar">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>601</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <column>
+    <property name="text">
+     <string>Nombre Serie</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Genero</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Total de temporadas</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Episodios por temporada</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Estado</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Temporada actual</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Episodio actual</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="btnVolver">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>260</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Volver</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnMostrar">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>260</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mostrar</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
