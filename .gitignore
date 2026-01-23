@@ -1,4 +1,6 @@
-build/
-build-*/
-*.user
+# Qt Creator
 .qtcreator/
+*.pro.user
+
+# Build folders
+build/
