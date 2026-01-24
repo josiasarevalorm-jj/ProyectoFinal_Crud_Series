@@ -2,6 +2,8 @@
 #define VENTANAAGREGAR_H
 
 #include <QDialog>
+#include <QStringList>
+#include "datos.h"
 
 namespace Ui {
 class VentanaAgregar;
@@ -16,7 +18,7 @@ public:
     ~VentanaAgregar();
 
 public:
-    QStringList obtenerSerie() const;
+    datos obtenerSerie() const;
 
 private slots:
     void on_btnVolver_clicked();

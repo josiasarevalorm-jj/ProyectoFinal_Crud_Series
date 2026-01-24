@@ -267,6 +267,32 @@
     <number>50</number>
    </property>
   </widget>
+  <widget class="QSpinBox" name="spinId">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>50</y>
+     <width>39</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>50</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>105</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Id:</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

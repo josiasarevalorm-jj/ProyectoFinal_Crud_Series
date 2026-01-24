@@ -22,8 +22,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_btnAgregar_clicked()
 {
-    VentanaAgregar ventanaAgregar;
-    ventanaAgregar.exec();
+    VentanaAgregar v(this);
+    v.exec();
 }
 
 
