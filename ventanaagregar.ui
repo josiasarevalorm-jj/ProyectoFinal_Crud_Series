@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VentanaAgregar</class>
+ <widget class="QDialog" name="VentanaAgregar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>581</width>
+    <height>445</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* =====================
+   FONDO DEL DIALOG
+===================== */
+QDialog {
+    background-color: rgb(18, 18, 18);
+}
+
+/* =====================
+   TITULO ROJO
+===================== */
+QLabel#labelTitulo {
+    background-color: rgb(229, 9, 20);   /* Rojo Netflix */
+    color: white;
+    font: 90 24pt &quot;Arial Black&quot;;          /* MÁS GRANDE y fuerte */
+    border-radius: 18px;
+    padding: 12px;
+    letter-spacing: 2px;                  /* Espaciado entre letras */
+    qproperty-alignment: AlignCenter;
+}
+
+/* =====================
+   LABELS (TEXTOS)
+===================== */
+QLabel {
+    color: rgb(220, 220, 220);
+    font: 10pt &quot;Arial&quot;;
+}
+
+/* =====================
+   INPUT TEXTO
+===================== */
+QLineEdit {
+    background-color: rgb(35, 35, 35);
+    color: white;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 10px;
+    padding: 6px;
+}
+
+/* =====================
+   SPINBOX
+===================== */
+QSpinBox {
+    background-color: rgb(35, 35, 35);
+    color: white;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 10px;
+    padding: 4px;
+}
+
+/* =====================
+   COMBOBOX
+===================== */
+QComboBox {
+    background-color: rgb(35, 35, 35);
+    color: white;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: rgb(25, 25, 25);
+    color: white;
+    selection-background-color: rgb(229, 9, 20);
+}
+
+/* =====================
+   BOTONES
+===================== */
+QPushButton {
+    background-color: rgb(45, 45, 45);
+    color: white;
+    font: 11pt &quot;Arial Black&quot;;
+    border-radius: 18px;
+    padding: 8px 22px;
+}
+
+QPushButton:hover {
+    background-color: rgb(229, 9, 20);
+}
+
+QPushButton:pressed {
+    background-color: rgb(180, 0, 0);
+}</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>511</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>---------------- AGREGAR SERIE ----------------</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label_9">
+          <property name="text">
+           <string>Id:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Nombre de la serie: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Genero de la serie: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Temporadas totales:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Episodios por temporada: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Estado: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_7">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Temporada actual:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_8">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Episodio actual: </string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QSpinBox" name="spinId">
+          <property name="maximum">
+           <number>50</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txtNombre">
+          <property name="placeholderText">
+           <string>Nombre de la serie</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txtGenero">
+          <property name="placeholderText">
+           <string>Genero de la serie</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinTemTotal">
+          <property name="maximum">
+           <number>50</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinEpTotal">
+          <property name="maximum">
+           <number>50</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cmbEstado">
+          <property name="placeholderText">
+           <string>Seleccione una opcion</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>Pendiente</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Viendo</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Acabada</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinTemActual">
+          <property name="maximum">
+           <number>50</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinEpActual">
+          <property name="maximum">
+           <number>50</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="btnGuardar">
+        <property name="text">
+         <string>Guardar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnVolver">
+        <property name="text">
+         <string>Volver</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

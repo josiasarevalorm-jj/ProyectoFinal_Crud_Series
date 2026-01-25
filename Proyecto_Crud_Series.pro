@@ -9,16 +9,36 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    datos.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    ventanaactualizar.cpp \
+    ventanaagregar.cpp \
+    ventanabuscar.cpp \
+    ventanaeliminar.cpp \
+    ventanamostrar.cpp
 
 HEADERS += \
-    mainwindow.h
+    datos.h \
+    mainwindow.h \
+    ventanaactualizar.h \
+    ventanaagregar.h \
+    ventanabuscar.h \
+    ventanaeliminar.h \
+    ventanamostrar.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    ventanaactualizar.ui \
+    ventanaagregar.ui \
+    ventanabuscar.ui \
+    ventanaeliminar.ui \
+    ventanamostrar.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    .gitignore
