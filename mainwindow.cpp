@@ -7,6 +7,7 @@
 #include "ventanaeliminar.h"
 #include <QDebug>
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -45,8 +46,8 @@ void MainWindow::on_btnActualizar_clicked()
 
 void MainWindow::on_btnBuscar_clicked()
 {
-    VentanaBuscar ventanaBuscar;
-    ventanaBuscar.exec();
+    VentanaBuscar v(listaSeries,this);
+    v.exec();
 }
 
 
