@@ -29,8 +29,8 @@ void MainWindow::on_btnAgregar_clicked()
 
 void MainWindow::on_btnMostrar_clicked()
 {
-    ventanaMostrar ventanaMostrar;
-    ventanaMostrar.exec();
+    ventanaMostrar v(this);
+    v.exec();
 }
 
 

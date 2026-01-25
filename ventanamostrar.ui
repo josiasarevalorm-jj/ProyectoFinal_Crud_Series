@@ -46,6 +46,11 @@
    </property>
    <column>
     <property name="text">
+     <string>Id</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
      <string>Nombre Serie</string>
     </property>
    </column>

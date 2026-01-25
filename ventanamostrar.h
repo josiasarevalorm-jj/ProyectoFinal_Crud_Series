@@ -18,7 +18,10 @@ public:
 private slots:
     void on_btnVolver_clicked();
 
+    void on_btnMostrar_clicked();
+
 private:
+    void cargarDatos();
     Ui::ventanaMostrar *ui;
 };
 
