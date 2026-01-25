@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VentanaEliminar</class>
+ <widget class="QDialog" name="VentanaEliminar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>505</width>
+    <height>321</height>
+   </rect>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QFrame {
+    background-color: rgb(61, 61, 61);
+}
+
+/* ---------- QLabel ---------- */
+QLabel {
+    font: 87 12pt &quot;Arial Black&quot;;
+    background-color: #000000;
+    color: rgb(0, 206, 151);
+    border: 0px;
+}
+
+/* ---------- QLineEdit ---------- */
+QLineEdit {
+    border: 0px;
+    border-bottom: 2px solid rgb(61, 61, 61);
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font: 75 12pt &quot;Times New Roman&quot;;
+}
+
+/* ---------- QPushButton ---------- */
+QPushButton {
+    background-color: rgb(61, 61, 61);
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    font: 77 10pt &quot;Arial Black&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(0, 206, 151);
+    color: rgb(0, 0, 0);
+}
+
+/* ---------- QTableWidget ---------- */
+QTableWidget {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    gridline-color: rgb(0, 206, 151);
+    font-size: 12pt;
+}
+
+/* ---------- Encabezados ---------- */
+QHeaderView::section {
+    background-color: rgb(0, 206, 151);
+    border: 1px solid rgb(0, 0, 0);
+    font-size: 12pt;
+}
+
+/* ---------- Botón esquina tabla ---------- */
+QTableWidget QTableCornerButton::section {
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 206, 151);
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>30</y>
+     <width>251</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>VENTANA DE ELIMINAR SERIE</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nombre:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtNombre">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>60</y>
+     <width>241</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Nombre de la serie a eliminar</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tablaEliminar">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>100</y>
+     <width>461</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>Nombre Serie</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Genero</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Total temporadas</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Episodios por temporada</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Estado</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Temporada actual</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Episodio actual</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="btnVolver">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>270</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Volver</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnEliminar">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>270</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Eliminar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnBuscar">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>60</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Buscar</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

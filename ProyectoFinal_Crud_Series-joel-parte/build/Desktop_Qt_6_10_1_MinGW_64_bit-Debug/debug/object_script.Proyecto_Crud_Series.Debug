@@ -1,0 +1,14 @@
+debug/datos.o
+debug/main.o
+debug/mainwindow.o
+debug/ventanaactualizar.o
+debug/ventanaagregar.o
+debug/ventanabuscar.o
+debug/ventanaeliminar.o
+debug/ventanamostrar.o
+debug/moc_mainwindow.o
+debug/moc_ventanaactualizar.o
+debug/moc_ventanaagregar.o
+debug/moc_ventanabuscar.o
+debug/moc_ventanaeliminar.o
+debug/moc_ventanamostrar.o

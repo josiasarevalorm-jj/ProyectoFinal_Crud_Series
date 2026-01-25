@@ -1,0 +1,14 @@
+release/datos.o
+release/main.o
+release/mainwindow.o
+release/ventanaactualizar.o
+release/ventanaagregar.o
+release/ventanabuscar.o
+release/ventanaeliminar.o
+release/ventanamostrar.o
+release/moc_mainwindow.o
+release/moc_ventanaactualizar.o
+release/moc_ventanaagregar.o
+release/moc_ventanabuscar.o
+release/moc_ventanaeliminar.o
+release/moc_ventanamostrar.o

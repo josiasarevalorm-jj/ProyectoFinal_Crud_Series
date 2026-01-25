@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VentanaActualizar</class>
+ <widget class="QDialog" name="VentanaActualizar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>507</width>
+    <height>315</height>
+   </rect>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QFrame {
+    background-color: rgb(61, 61, 61);
+}
+
+/* ---------- QLabel ---------- */
+QLabel {
+    font: 87 12pt &quot;Arial Black&quot;;
+    background-color: #000000;
+    color: rgb(0, 206, 151);
+    border: 0px;
+}
+
+/* ---------- QLineEdit ---------- */
+QLineEdit {
+    border: 0px;
+    border-bottom: 2px solid rgb(61, 61, 61);
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font: 75 12pt &quot;Times New Roman&quot;;
+}
+
+/* ---------- QPushButton ---------- */
+QPushButton {
+    background-color: rgb(61, 61, 61);
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    font: 77 10pt &quot;Arial Black&quot;;
+}
+
+QPushButton:hover {
+    background-color: rgb(0, 206, 151);
+    color: rgb(0, 0, 0);
+}
+
+/* ---------- QTableWidget ---------- */
+QTableWidget {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    gridline-color: rgb(0, 206, 151);
+    font-size: 12pt;
+}
+
+/* ---------- Encabezados ---------- */
+QHeaderView::section {
+    background-color: rgb(0, 206, 151);
+    border: 1px solid rgb(0, 0, 0);
+    font-size: 12pt;
+}
+
+/* ---------- Botón esquina tabla ---------- */
+QTableWidget QTableCornerButton::section {
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 206, 151);
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>20</y>
+     <width>321</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>VENTANA DE ACTUALIZAR SERIE</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>151</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nombre de la serie: </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>242</y>
+     <width>181</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Temporada actual:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>272</y>
+     <width>141</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Episodio actual: </string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtNombre">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>80</y>
+     <width>181</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinTemActual">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>243</y>
+     <width>39</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>212</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Estado:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmbEstado">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>213</y>
+     <width>141</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>-1</number>
+   </property>
+   <property name="placeholderText">
+    <string>Selecione una opcion</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Pendiente</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Viendo</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Acabada</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QSpinBox" name="spinEpActual">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>270</y>
+     <width>39</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnActualizar">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>220</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Actualizar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnBuscar">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>50</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Buscar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnVover">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>250</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Volver</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtId">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>50</y>
+     <width>181</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Id de la serie a buscar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>105</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Id:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>120</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Genero:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>150</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Temporadas totales:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>180</y>
+     <width>211</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Episodios por temporada:</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinTemTotal">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>150</y>
+     <width>39</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinEpTotal">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>180</y>
+     <width>39</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtGenero">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>110</y>
+     <width>181</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
