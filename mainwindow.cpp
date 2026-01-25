@@ -53,7 +53,7 @@ void MainWindow::on_btnBuscar_clicked()
 
 void MainWindow::on_btnEliminar_clicked()
 {
-    VentanaEliminar ventanaEliminar;
-    ventanaEliminar.exec();
+    VentanaEliminar v(listaSeries,this);
+    v.exec();
 }
 

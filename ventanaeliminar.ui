@@ -39,10 +39,10 @@
     </rect>
    </property>
    <property name="text">
-    <string>Nombre:</string>
+    <string>Id:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="txtNombre">
+  <widget class="QLineEdit" name="txtId">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -52,7 +52,7 @@
     </rect>
    </property>
    <property name="placeholderText">
-    <string>Nombre de la serie a eliminar</string>
+    <string>Id de la serie a eliminar</string>
    </property>
   </widget>
   <widget class="QTableWidget" name="tablaEliminar">
