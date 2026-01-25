@@ -13,168 +13,311 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_VentanaActualizar
 {
 public:
+    QWidget *widget;
+    QVBoxLayout *verticalLayout_3;
     QLabel *label;
-    QLabel *label_2;
-    QLabel *label_3;
-    QLabel *label_4;
-    QLineEdit *txtNombre;
-    QSpinBox *spinTemActual;
-    QLabel *label_5;
-    QComboBox *cmbEstado;
-    QSpinBox *spinEpActual;
-    QPushButton *btnActualizar;
-    QPushButton *btnBuscar;
-    QPushButton *btnVover;
-    QLineEdit *txtId;
+    QHBoxLayout *horizontalLayout;
     QLabel *label_6;
+    QLineEdit *txtId;
+    QPushButton *btnBuscar;
+    QHBoxLayout *horizontalLayout_2;
+    QVBoxLayout *verticalLayout;
+    QLabel *label_2;
     QLabel *label_7;
     QLabel *label_8;
     QLabel *label_9;
+    QLabel *label_5;
+    QLabel *label_3;
+    QLabel *label_4;
+    QVBoxLayout *verticalLayout_2;
+    QLineEdit *txtNombre;
+    QLineEdit *txtGenero;
     QSpinBox *spinTemTotal;
     QSpinBox *spinEpTotal;
-    QLineEdit *txtGenero;
+    QComboBox *cmbEstado;
+    QSpinBox *spinTemActual;
+    QSpinBox *spinEpActual;
+    QHBoxLayout *horizontalLayout_3;
+    QPushButton *btnVover;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *btnActualizar;
 
     void setupUi(QDialog *VentanaActualizar)
     {
         if (VentanaActualizar->objectName().isEmpty())
             VentanaActualizar->setObjectName("VentanaActualizar");
-        VentanaActualizar->resize(507, 315);
-        QPalette palette;
-        QBrush brush(QColor(0, 0, 0, 255));
-        brush.setStyle(Qt::BrushStyle::SolidPattern);
-        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::Window, brush);
-        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::Window, brush);
-        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Base, brush);
-        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Window, brush);
-        VentanaActualizar->setPalette(palette);
-        VentanaActualizar->setStyleSheet(QString::fromUtf8("QFrame {\n"
-"    background-color: rgb(61, 61, 61);\n"
+        VentanaActualizar->resize(512, 499);
+        VentanaActualizar->setStyleSheet(QString::fromUtf8("/* =====================\n"
+"   FONDO DEL DIALOG\n"
+"===================== */\n"
+"QDialog {\n"
+"    background-color: rgb(18, 18, 18);\n"
 "}\n"
 "\n"
-"/* ---------- QLabel ---------- */\n"
+"/* =====================\n"
+"   TITULO ROJO\n"
+"===================== */\n"
+"QLabel#labelTitulo {\n"
+"    background-color: rgb(229, 9, 20);\n"
+"    color: white;\n"
+"    font: 87 18pt \"Arial Black\";\n"
+"    border-radius: 14px;\n"
+"    padding: 8px;\n"
+"    qproperty-alignment: AlignCenter;\n"
+"}\n"
+"\n"
+"/* =====================\n"
+"   LABELS (TEXTOS)\n"
+"===================== */\n"
 "QLabel {\n"
-"    font: 87 12pt \"Arial Black\";\n"
-"    background-color: #000000;\n"
-"    color: rgb(0, 206, 151);\n"
-"    border: 0px;\n"
+"    color: rgb(220, 220, 220);\n"
+"    font: 10pt \"Arial\";\n"
 "}\n"
 "\n"
-"/* ---------- QLineEdit ---------- */\n"
+"/* =====================\n"
+"   INPUT TEXTO\n"
+"===================== */\n"
 "QLineEdit {\n"
-"    border: 0px;\n"
-"    border-bottom: 2px solid rgb(61, 61, 61);\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(0, 0, 0);\n"
-"    font: 75 12pt \"Times New Roman\";\n"
+"    background-color: rgb(35, 35, 35);\n"
+"    color: white;\n"
+"    border: 1px solid rgb(80, 80, 80);\n"
+"    border-radius: 10px;\n"
+"    padding: 6px;\n"
 "}\n"
 "\n"
-"/* ---------- QPushButton ---------- */\n"
+"/* =====================\n"
+"   SPINBOX\n"
+"===================== */\n"
+"QSpinBox {\n"
+"    background-color: rgb(35, 35, 35);\n"
+" "
+                        "   color: white;\n"
+"    border: 1px solid rgb(80, 80, 80);\n"
+"    border-radius: 10px;\n"
+"    padding: 4px;\n"
+"}\n"
+"\n"
+"/* =====================\n"
+"   COMBOBOX\n"
+"===================== */\n"
+"QComboBox {\n"
+"    background-color: rgb(35, 35, 35);\n"
+"    color: white;\n"
+"    border: 1px solid rgb(80, 80, 80);\n"
+"    border-radius: 10px;\n"
+"    padding: 5px;\n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    background-color: rgb(25, 25, 25);\n"
+"    color: white;\n"
+"    selection-background-color: rgb(229, 9, 20);\n"
+"}\n"
+"\n"
+"/* =====================\n"
+"   BOTONES\n"
+"===================== */\n"
 "QPushButton {\n"
-"    background-color: rgb(61, 61, 61);\n"
-"    border-radius: 15px;\n"
-"    color: rgb(255, 255, 255);\n"
-"    font: 77 10pt \"Arial Black\";\n"
+"    background-color: rgb(45, 45, 45);\n"
+"    color: white;\n"
+"    font: 11pt \"Arial Black\";\n"
+"    border-radius: 18px;\n"
+"    padding: 8px 22px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(0, 206, 151);\n"
-"    color: rgb(0, 0, 0);\n"
+"    background-color: rgb(229, 9, 20);\n"
 "}\n"
 "\n"
-"/* ---------- QTableWidget ---------- */\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(180, 0, 0);\n"
+"}\n"
 "QTableWidget {\n"
-"    background-color: rgb(255, 255, 255);\n"
-"    color: rgb(0, 0, 0);\n"
-"    gridline-color: rgb(0, 206, 151);\n"
-" "
-                        "   font-size: 12pt;\n"
+"    background-color: rgb(20, 20, 20);\n"
+"   "
+                        " color: rgb(220, 220, 220);\n"
+"    gridline-color: rgb(60, 60, 60);\n"
+"    border: 1px solid rgb(60, 60, 60);\n"
+"    font: 10pt \"Segoe UI\";\n"
 "}\n"
 "\n"
-"/* ---------- Encabezados ---------- */\n"
+"/* Encabezados */\n"
 "QHeaderView::section {\n"
-"    background-color: rgb(0, 206, 151);\n"
-"    border: 1px solid rgb(0, 0, 0);\n"
-"    font-size: 12pt;\n"
+"    background-color: rgb(35, 35, 35);\n"
+"    color: white;\n"
+"    font: 11pt \"Arial Black\";\n"
+"    border: none;\n"
+"    padding: 6px;\n"
 "}\n"
 "\n"
-"/* ---------- Bot\303\263n esquina tabla ---------- */\n"
-"QTableWidget QTableCornerButton::section {\n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 1px solid rgb(0, 206, 151);\n"
+"/* Filas alternas */\n"
+"QTableWidget::item {\n"
+"    padding: 6px;\n"
+"}\n"
+"\n"
+"QTableWidget::item:selected {\n"
+"    background-color: rgb(229, 9, 20);\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"/* Bot\303\263n esquina (arriba izquierda) */\n"
+"QTableCornerButton::section {\n"
+"    background-color: rgb(35, 35, 35);\n"
+"    border: none;\n"
 "}"));
-        label = new QLabel(VentanaActualizar);
+        widget = new QWidget(VentanaActualizar);
+        widget->setObjectName("widget");
+        widget->setGeometry(QRect(29, 20, 441, 402));
+        verticalLayout_3 = new QVBoxLayout(widget);
+        verticalLayout_3->setObjectName("verticalLayout_3");
+        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
+        label = new QLabel(widget);
         label->setObjectName("label");
-        label->setGeometry(QRect(130, 20, 321, 16));
-        label_2 = new QLabel(VentanaActualizar);
+        label->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        verticalLayout_3->addWidget(label);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName("horizontalLayout");
+        label_6 = new QLabel(widget);
+        label_6->setObjectName("label_6");
+
+        horizontalLayout->addWidget(label_6);
+
+        txtId = new QLineEdit(widget);
+        txtId->setObjectName("txtId");
+
+        horizontalLayout->addWidget(txtId);
+
+        btnBuscar = new QPushButton(widget);
+        btnBuscar->setObjectName("btnBuscar");
+
+        horizontalLayout->addWidget(btnBuscar);
+
+
+        verticalLayout_3->addLayout(horizontalLayout);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName("verticalLayout");
+        label_2 = new QLabel(widget);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(20, 90, 151, 16));
-        label_3 = new QLabel(VentanaActualizar);
-        label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(19, 242, 181, 16));
-        label_4 = new QLabel(VentanaActualizar);
-        label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(19, 272, 141, 16));
-        txtNombre = new QLineEdit(VentanaActualizar);
-        txtNombre->setObjectName("txtNombre");
-        txtNombre->setGeometry(QRect(210, 80, 181, 24));
-        spinTemActual = new QSpinBox(VentanaActualizar);
-        spinTemActual->setObjectName("spinTemActual");
-        spinTemActual->setGeometry(QRect(210, 243, 39, 21));
-        label_5 = new QLabel(VentanaActualizar);
+
+        verticalLayout->addWidget(label_2);
+
+        label_7 = new QLabel(widget);
+        label_7->setObjectName("label_7");
+
+        verticalLayout->addWidget(label_7);
+
+        label_8 = new QLabel(widget);
+        label_8->setObjectName("label_8");
+
+        verticalLayout->addWidget(label_8);
+
+        label_9 = new QLabel(widget);
+        label_9->setObjectName("label_9");
+
+        verticalLayout->addWidget(label_9);
+
+        label_5 = new QLabel(widget);
         label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(19, 212, 101, 16));
-        cmbEstado = new QComboBox(VentanaActualizar);
+
+        verticalLayout->addWidget(label_5);
+
+        label_3 = new QLabel(widget);
+        label_3->setObjectName("label_3");
+
+        verticalLayout->addWidget(label_3);
+
+        label_4 = new QLabel(widget);
+        label_4->setObjectName("label_4");
+
+        verticalLayout->addWidget(label_4);
+
+
+        horizontalLayout_2->addLayout(verticalLayout);
+
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        txtNombre = new QLineEdit(widget);
+        txtNombre->setObjectName("txtNombre");
+
+        verticalLayout_2->addWidget(txtNombre);
+
+        txtGenero = new QLineEdit(widget);
+        txtGenero->setObjectName("txtGenero");
+
+        verticalLayout_2->addWidget(txtGenero);
+
+        spinTemTotal = new QSpinBox(widget);
+        spinTemTotal->setObjectName("spinTemTotal");
+
+        verticalLayout_2->addWidget(spinTemTotal);
+
+        spinEpTotal = new QSpinBox(widget);
+        spinEpTotal->setObjectName("spinEpTotal");
+
+        verticalLayout_2->addWidget(spinEpTotal);
+
+        cmbEstado = new QComboBox(widget);
         cmbEstado->addItem(QString());
         cmbEstado->addItem(QString());
         cmbEstado->addItem(QString());
         cmbEstado->setObjectName("cmbEstado");
-        cmbEstado->setGeometry(QRect(210, 213, 141, 24));
-        spinEpActual = new QSpinBox(VentanaActualizar);
+
+        verticalLayout_2->addWidget(cmbEstado);
+
+        spinTemActual = new QSpinBox(widget);
+        spinTemActual->setObjectName("spinTemActual");
+
+        verticalLayout_2->addWidget(spinTemActual);
+
+        spinEpActual = new QSpinBox(widget);
         spinEpActual->setObjectName("spinEpActual");
-        spinEpActual->setGeometry(QRect(210, 270, 39, 21));
-        btnActualizar = new QPushButton(VentanaActualizar);
-        btnActualizar->setObjectName("btnActualizar");
-        btnActualizar->setGeometry(QRect(400, 220, 80, 24));
-        btnBuscar = new QPushButton(VentanaActualizar);
-        btnBuscar->setObjectName("btnBuscar");
-        btnBuscar->setGeometry(QRect(400, 50, 80, 24));
-        btnVover = new QPushButton(VentanaActualizar);
+
+        verticalLayout_2->addWidget(spinEpActual);
+
+
+        horizontalLayout_2->addLayout(verticalLayout_2);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_2);
+
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
+        btnVover = new QPushButton(widget);
         btnVover->setObjectName("btnVover");
-        btnVover->setGeometry(QRect(400, 250, 80, 24));
-        txtId = new QLineEdit(VentanaActualizar);
-        txtId->setObjectName("txtId");
-        txtId->setGeometry(QRect(210, 50, 181, 24));
-        label_6 = new QLabel(VentanaActualizar);
-        label_6->setObjectName("label_6");
-        label_6->setGeometry(QRect(20, 60, 105, 16));
-        label_7 = new QLabel(VentanaActualizar);
-        label_7->setObjectName("label_7");
-        label_7->setGeometry(QRect(20, 120, 51, 16));
-        label_8 = new QLabel(VentanaActualizar);
-        label_8->setObjectName("label_8");
-        label_8->setGeometry(QRect(20, 150, 121, 16));
-        label_9 = new QLabel(VentanaActualizar);
-        label_9->setObjectName("label_9");
-        label_9->setGeometry(QRect(20, 180, 211, 16));
-        spinTemTotal = new QSpinBox(VentanaActualizar);
-        spinTemTotal->setObjectName("spinTemTotal");
-        spinTemTotal->setGeometry(QRect(210, 150, 39, 21));
-        spinEpTotal = new QSpinBox(VentanaActualizar);
-        spinEpTotal->setObjectName("spinEpTotal");
-        spinEpTotal->setGeometry(QRect(210, 180, 39, 21));
-        txtGenero = new QLineEdit(VentanaActualizar);
-        txtGenero->setObjectName("txtGenero");
-        txtGenero->setGeometry(QRect(210, 110, 181, 24));
+
+        horizontalLayout_3->addWidget(btnVover);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer);
+
+        btnActualizar = new QPushButton(widget);
+        btnActualizar->setObjectName("btnActualizar");
+
+        horizontalLayout_3->addWidget(btnActualizar);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_3);
+
 
         retranslateUi(VentanaActualizar);
 
@@ -187,26 +330,26 @@ public:
     void retranslateUi(QDialog *VentanaActualizar)
     {
         VentanaActualizar->setWindowTitle(QCoreApplication::translate("VentanaActualizar", "Dialog", nullptr));
-        label->setText(QCoreApplication::translate("VentanaActualizar", "VENTANA DE ACTUALIZAR SERIE", nullptr));
+        label->setText(QCoreApplication::translate("VentanaActualizar", "--------- ACTUALIZAR SERIE ---------", nullptr));
+        label_6->setText(QCoreApplication::translate("VentanaActualizar", "Id:", nullptr));
+        txtId->setPlaceholderText(QCoreApplication::translate("VentanaActualizar", "Id de la serie a buscar", nullptr));
+        btnBuscar->setText(QCoreApplication::translate("VentanaActualizar", "Buscar", nullptr));
         label_2->setText(QCoreApplication::translate("VentanaActualizar", "Nombre de la serie: ", nullptr));
+        label_7->setText(QCoreApplication::translate("VentanaActualizar", "Genero:", nullptr));
+        label_8->setText(QCoreApplication::translate("VentanaActualizar", "Temporadas totales:", nullptr));
+        label_9->setText(QCoreApplication::translate("VentanaActualizar", "Episodios por temporada:", nullptr));
+        label_5->setText(QCoreApplication::translate("VentanaActualizar", "Estado:", nullptr));
         label_3->setText(QCoreApplication::translate("VentanaActualizar", "Temporada actual:", nullptr));
         label_4->setText(QCoreApplication::translate("VentanaActualizar", "Episodio actual: ", nullptr));
         txtNombre->setPlaceholderText(QString());
-        label_5->setText(QCoreApplication::translate("VentanaActualizar", "Estado:", nullptr));
+        txtGenero->setPlaceholderText(QString());
         cmbEstado->setItemText(0, QCoreApplication::translate("VentanaActualizar", "Pendiente", nullptr));
         cmbEstado->setItemText(1, QCoreApplication::translate("VentanaActualizar", "Viendo", nullptr));
         cmbEstado->setItemText(2, QCoreApplication::translate("VentanaActualizar", "Acabada", nullptr));
 
         cmbEstado->setPlaceholderText(QCoreApplication::translate("VentanaActualizar", "Selecione una opcion", nullptr));
-        btnActualizar->setText(QCoreApplication::translate("VentanaActualizar", "Actualizar", nullptr));
-        btnBuscar->setText(QCoreApplication::translate("VentanaActualizar", "Buscar", nullptr));
         btnVover->setText(QCoreApplication::translate("VentanaActualizar", "Volver", nullptr));
-        txtId->setPlaceholderText(QCoreApplication::translate("VentanaActualizar", "Id de la serie a buscar", nullptr));
-        label_6->setText(QCoreApplication::translate("VentanaActualizar", "Id:", nullptr));
-        label_7->setText(QCoreApplication::translate("VentanaActualizar", "Genero:", nullptr));
-        label_8->setText(QCoreApplication::translate("VentanaActualizar", "Temporadas totales:", nullptr));
-        label_9->setText(QCoreApplication::translate("VentanaActualizar", "Episodios por temporada:", nullptr));
-        txtGenero->setPlaceholderText(QString());
+        btnActualizar->setText(QCoreApplication::translate("VentanaActualizar", "Actualizar", nullptr));
     } // retranslateUi
 
 };

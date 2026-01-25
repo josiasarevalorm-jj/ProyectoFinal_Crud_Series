@@ -6,224 +6,253 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>529</width>
-    <height>300</height>
+    <width>639</width>
+    <height>402</height>
    </rect>
-  </property>
-  <property name="palette">
-   <palette>
-    <active>
-     <colorrole role="Window">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-       </color>
-      </brush>
-     </colorrole>
-    </active>
-    <inactive>
-     <colorrole role="Window">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-       </color>
-      </brush>
-     </colorrole>
-    </inactive>
-    <disabled>
-     <colorrole role="Base">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-       </color>
-      </brush>
-     </colorrole>
-     <colorrole role="Window">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-       </color>
-      </brush>
-     </colorrole>
-    </disabled>
-   </palette>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QFrame {
-    background-color: rgb(61, 61, 61);
+   <string notr="true">/* =====================
+   FONDO DEL DIALOG
+===================== */
+QDialog {
+    background-color: rgb(18, 18, 18);
 }
 
-/* ---------- QLabel ---------- */
+/* =====================
+   TITULO ROJO
+===================== */
+QLabel#labelTitulo {
+    background-color: rgb(229, 9, 20);
+    color: white;
+    font: 87 18pt &quot;Arial Black&quot;;
+    border-radius: 14px;
+    padding: 8px;
+    qproperty-alignment: AlignCenter;
+}
+
+/* =====================
+   LABELS (TEXTOS)
+===================== */
 QLabel {
-    font: 87 12pt &quot;Arial Black&quot;;
-    background-color: #000000;
-    color: rgb(0, 206, 151);
-    border: 0px;
+    color: rgb(220, 220, 220);
+    font: 10pt &quot;Arial&quot;;
 }
 
-/* ---------- QLineEdit ---------- */
+/* =====================
+   INPUT TEXTO
+===================== */
 QLineEdit {
-    border: 0px;
-    border-bottom: 2px solid rgb(61, 61, 61);
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-    font: 75 12pt &quot;Times New Roman&quot;;
+    background-color: rgb(35, 35, 35);
+    color: white;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 10px;
+    padding: 6px;
 }
 
-/* ---------- QPushButton ---------- */
+/* =====================
+   SPINBOX
+===================== */
+QSpinBox {
+    background-color: rgb(35, 35, 35);
+    color: white;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 10px;
+    padding: 4px;
+}
+
+/* =====================
+   COMBOBOX
+===================== */
+QComboBox {
+    background-color: rgb(35, 35, 35);
+    color: white;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: rgb(25, 25, 25);
+    color: white;
+    selection-background-color: rgb(229, 9, 20);
+}
+
+/* =====================
+   BOTONES
+===================== */
 QPushButton {
-    background-color: rgb(61, 61, 61);
-    border-radius: 15px;
-    color: rgb(255, 255, 255);
-    font: 77 10pt &quot;Arial Black&quot;;
+    background-color: rgb(45, 45, 45);
+    color: white;
+    font: 11pt &quot;Arial Black&quot;;
+    border-radius: 18px;
+    padding: 8px 22px;
 }
 
 QPushButton:hover {
-    background-color: rgb(0, 206, 151);
-    color: rgb(0, 0, 0);
+    background-color: rgb(229, 9, 20);
 }
 
-/* ---------- QTableWidget ---------- */
+QPushButton:pressed {
+    background-color: rgb(180, 0, 0);
+}
 QTableWidget {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    gridline-color: rgb(0, 206, 151);
-    font-size: 12pt;
+    background-color: rgb(20, 20, 20);
+    color: rgb(220, 220, 220);
+    gridline-color: rgb(60, 60, 60);
+    border: 1px solid rgb(60, 60, 60);
+    font: 10pt &quot;Segoe UI&quot;;
 }
 
-/* ---------- Encabezados ---------- */
+/* Encabezados */
 QHeaderView::section {
-    background-color: rgb(0, 206, 151);
-    border: 1px solid rgb(0, 0, 0);
-    font-size: 12pt;
+    background-color: rgb(35, 35, 35);
+    color: white;
+    font: 11pt &quot;Arial Black&quot;;
+    border: none;
+    padding: 6px;
 }
 
-/* ---------- Botón esquina tabla ---------- */
-QTableWidget QTableCornerButton::section {
-    background-color: rgb(0, 0, 0);
-    border: 1px solid rgb(0, 206, 151);
+/* Filas alternas */
+QTableWidget::item {
+    padding: 6px;
+}
+
+QTableWidget::item:selected {
+    background-color: rgb(229, 9, 20);
+    color: white;
+}
+
+/* Botón esquina (arriba izquierda) */
+QTableCornerButton::section {
+    background-color: rgb(35, 35, 35);
+    border: none;
 }</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>20</y>
-     <width>301</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>VENTANA DE BUSCAR SERIE</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>60</y>
-     <width>61</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Nombre:</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="txtNombre">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>60</y>
-     <width>191</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="placeholderText">
-    <string>Nombre de la serie a buscar</string>
-   </property>
-  </widget>
-  <widget class="QTableWidget" name="tablaBuscar">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>100</y>
-     <width>501</width>
-     <height>131</height>
+     <y>20</y>
+     <width>581</width>
+     <height>301</height>
     </rect>
    </property>
-   <column>
-    <property name="text">
-     <string>Nombre serie</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Genero</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Total temporadas</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Episodios por temporada</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Estado</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Temporada actual</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Episodio actual</string>
-    </property>
-   </column>
-  </widget>
-  <widget class="QPushButton" name="btnVolver">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>250</y>
-     <width>61</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Volver</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btnBuscar">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>60</y>
-     <width>61</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Buscar</string>
-   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>--------- BUSCAR SERIE ---------</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Id:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="txtId">
+        <property name="placeholderText">
+         <string>Id de la serie a buscar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnBuscar">
+        <property name="text">
+         <string>Buscar</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tablaBuscar">
+      <column>
+       <property name="text">
+        <string>Nombre serie</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Genero</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Total temporadas</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Episodios por temporada</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Estado</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Temporada actual</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Episodio actual</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnVolver">
+        <property name="text">
+         <string>Volver</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

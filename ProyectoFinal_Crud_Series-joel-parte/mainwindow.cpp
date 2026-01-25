@@ -7,6 +7,7 @@
 #include "ventanaeliminar.h"
 #include <QDebug>
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -25,8 +26,11 @@ MainWindow::~MainWindow()
 void MainWindow::on_btnAgregar_clicked()
 {
     VentanaAgregar v(this);
-    v.exec();
+    if(v.exec() == QDialog::Accepted){
+        listaSeries = datos::cargarDesdeArchivo();
+    }
 }
+
 
 
 void MainWindow::on_btnMostrar_clicked()
@@ -45,14 +49,14 @@ void MainWindow::on_btnActualizar_clicked()
 
 void MainWindow::on_btnBuscar_clicked()
 {
-    VentanaBuscar ventanaBuscar;
-    ventanaBuscar.exec();
+    VentanaBuscar v(listaSeries,this);
+    v.exec();
 }
 
 
 void MainWindow::on_btnEliminar_clicked()
 {
-    VentanaEliminar ventanaEliminar;
-    ventanaEliminar.exec();
+    VentanaEliminar v(listaSeries,this);
+    v.exec();
 }
 

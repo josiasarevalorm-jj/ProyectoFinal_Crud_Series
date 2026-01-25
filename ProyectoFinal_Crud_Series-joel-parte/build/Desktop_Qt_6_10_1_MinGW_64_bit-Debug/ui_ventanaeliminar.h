@@ -12,103 +12,190 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTableWidget>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_VentanaEliminar
 {
 public:
+    QWidget *widget;
+    QVBoxLayout *verticalLayout;
     QLabel *label;
+    QHBoxLayout *horizontalLayout_2;
     QLabel *label_2;
-    QLineEdit *txtNombre;
-    QTableWidget *tablaEliminar;
-    QPushButton *btnVolver;
-    QPushButton *btnEliminar;
+    QLineEdit *txtId;
     QPushButton *btnBuscar;
+    QTableWidget *tablaEliminar;
+    QHBoxLayout *horizontalLayout;
+    QPushButton *btnEliminar;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *btnVolver;
 
     void setupUi(QDialog *VentanaEliminar)
     {
         if (VentanaEliminar->objectName().isEmpty())
             VentanaEliminar->setObjectName("VentanaEliminar");
-        VentanaEliminar->resize(505, 321);
-        QPalette palette;
-        QBrush brush(QColor(0, 0, 0, 255));
-        brush.setStyle(Qt::BrushStyle::SolidPattern);
-        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::Window, brush);
-        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::Window, brush);
-        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Base, brush);
-        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Window, brush);
-        VentanaEliminar->setPalette(palette);
-        VentanaEliminar->setStyleSheet(QString::fromUtf8("QFrame {\n"
-"    background-color: rgb(61, 61, 61);\n"
+        VentanaEliminar->resize(502, 414);
+        VentanaEliminar->setStyleSheet(QString::fromUtf8("/* =====================\n"
+"   FONDO DEL DIALOG\n"
+"===================== */\n"
+"QDialog {\n"
+"    background-color: rgb(18, 18, 18);\n"
 "}\n"
 "\n"
-"/* ---------- QLabel ---------- */\n"
+"/* =====================\n"
+"   TITULO ROJO\n"
+"===================== */\n"
+"QLabel#labelTitulo {\n"
+"    background-color: rgb(229, 9, 20);\n"
+"    color: white;\n"
+"    font: 87 18pt \"Arial Black\";\n"
+"    border-radius: 14px;\n"
+"    padding: 8px;\n"
+"    qproperty-alignment: AlignCenter;\n"
+"}\n"
+"\n"
+"/* =====================\n"
+"   LABELS (TEXTOS)\n"
+"===================== */\n"
 "QLabel {\n"
-"    font: 87 12pt \"Arial Black\";\n"
-"    background-color: #000000;\n"
-"    color: rgb(0, 206, 151);\n"
-"    border: 0px;\n"
+"    color: rgb(220, 220, 220);\n"
+"    font: 10pt \"Arial\";\n"
 "}\n"
 "\n"
-"/* ---------- QLineEdit ---------- */\n"
+"/* =====================\n"
+"   INPUT TEXTO\n"
+"===================== */\n"
 "QLineEdit {\n"
-"    border: 0px;\n"
-"    border-bottom: 2px solid rgb(61, 61, 61);\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(0, 0, 0);\n"
-"    font: 75 12pt \"Times New Roman\";\n"
+"    background-color: rgb(35, 35, 35);\n"
+"    color: white;\n"
+"    border: 1px solid rgb(80, 80, 80);\n"
+"    border-radius: 10px;\n"
+"    padding: 6px;\n"
 "}\n"
 "\n"
-"/* ---------- QPushButton ---------- */\n"
+"/* =====================\n"
+"   SPINBOX\n"
+"===================== */\n"
+"QSpinBox {\n"
+"    background-color: rgb(35, 35, 35);\n"
+" "
+                        "   color: white;\n"
+"    border: 1px solid rgb(80, 80, 80);\n"
+"    border-radius: 10px;\n"
+"    padding: 4px;\n"
+"}\n"
+"\n"
+"/* =====================\n"
+"   COMBOBOX\n"
+"===================== */\n"
+"QComboBox {\n"
+"    background-color: rgb(35, 35, 35);\n"
+"    color: white;\n"
+"    border: 1px solid rgb(80, 80, 80);\n"
+"    border-radius: 10px;\n"
+"    padding: 5px;\n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    background-color: rgb(25, 25, 25);\n"
+"    color: white;\n"
+"    selection-background-color: rgb(229, 9, 20);\n"
+"}\n"
+"\n"
+"/* =====================\n"
+"   BOTONES\n"
+"===================== */\n"
 "QPushButton {\n"
-"    background-color: rgb(61, 61, 61);\n"
-"    border-radius: 15px;\n"
-"    color: rgb(255, 255, 255);\n"
-"    font: 77 10pt \"Arial Black\";\n"
+"    background-color: rgb(45, 45, 45);\n"
+"    color: white;\n"
+"    font: 11pt \"Arial Black\";\n"
+"    border-radius: 18px;\n"
+"    padding: 8px 22px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(0, 206, 151);\n"
-"    color: rgb(0, 0, 0);\n"
+"    background-color: rgb(229, 9, 20);\n"
 "}\n"
 "\n"
-"/* ---------- QTableWidget ---------- */\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(180, 0, 0);\n"
+"}\n"
 "QTableWidget {\n"
-"    background-color: rgb(255, 255, 255);\n"
-"    color: rgb(0, 0, 0);\n"
-"    gridline-color: rgb(0, 206, 151);\n"
-" "
-                        "   font-size: 12pt;\n"
+"    background-color: rgb(20, 20, 20);\n"
+"   "
+                        " color: rgb(220, 220, 220);\n"
+"    gridline-color: rgb(60, 60, 60);\n"
+"    border: 1px solid rgb(60, 60, 60);\n"
+"    font: 10pt \"Segoe UI\";\n"
 "}\n"
 "\n"
-"/* ---------- Encabezados ---------- */\n"
+"/* Encabezados */\n"
 "QHeaderView::section {\n"
-"    background-color: rgb(0, 206, 151);\n"
-"    border: 1px solid rgb(0, 0, 0);\n"
-"    font-size: 12pt;\n"
+"    background-color: rgb(35, 35, 35);\n"
+"    color: white;\n"
+"    font: 11pt \"Arial Black\";\n"
+"    border: none;\n"
+"    padding: 6px;\n"
 "}\n"
 "\n"
-"/* ---------- Bot\303\263n esquina tabla ---------- */\n"
-"QTableWidget QTableCornerButton::section {\n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 1px solid rgb(0, 206, 151);\n"
+"/* Filas alternas */\n"
+"QTableWidget::item {\n"
+"    padding: 6px;\n"
+"}\n"
+"\n"
+"QTableWidget::item:selected {\n"
+"    background-color: rgb(229, 9, 20);\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"/* Bot\303\263n esquina (arriba izquierda) */\n"
+"QTableCornerButton::section {\n"
+"    background-color: rgb(35, 35, 35);\n"
+"    border: none;\n"
 "}"));
-        label = new QLabel(VentanaEliminar);
+        widget = new QWidget(VentanaEliminar);
+        widget->setObjectName("widget");
+        widget->setGeometry(QRect(20, 30, 451, 331));
+        verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        label = new QLabel(widget);
         label->setObjectName("label");
-        label->setGeometry(QRect(140, 30, 251, 16));
-        label_2 = new QLabel(VentanaEliminar);
+        label->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        verticalLayout->addWidget(label);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
+        label_2 = new QLabel(widget);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(30, 60, 49, 16));
-        txtNombre = new QLineEdit(VentanaEliminar);
-        txtNombre->setObjectName("txtNombre");
-        txtNombre->setGeometry(QRect(100, 60, 241, 24));
-        tablaEliminar = new QTableWidget(VentanaEliminar);
+
+        horizontalLayout_2->addWidget(label_2);
+
+        txtId = new QLineEdit(widget);
+        txtId->setObjectName("txtId");
+
+        horizontalLayout_2->addWidget(txtId);
+
+        btnBuscar = new QPushButton(widget);
+        btnBuscar->setObjectName("btnBuscar");
+
+        horizontalLayout_2->addWidget(btnBuscar);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
+
+        tablaEliminar = new QTableWidget(widget);
         if (tablaEliminar->columnCount() < 7)
             tablaEliminar->setColumnCount(7);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
@@ -126,16 +213,28 @@ public:
         QTableWidgetItem *__qtablewidgetitem6 = new QTableWidgetItem();
         tablaEliminar->setHorizontalHeaderItem(6, __qtablewidgetitem6);
         tablaEliminar->setObjectName("tablaEliminar");
-        tablaEliminar->setGeometry(QRect(30, 100, 461, 151));
-        btnVolver = new QPushButton(VentanaEliminar);
-        btnVolver->setObjectName("btnVolver");
-        btnVolver->setGeometry(QRect(310, 270, 80, 24));
-        btnEliminar = new QPushButton(VentanaEliminar);
+
+        verticalLayout->addWidget(tablaEliminar);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName("horizontalLayout");
+        btnEliminar = new QPushButton(widget);
         btnEliminar->setObjectName("btnEliminar");
-        btnEliminar->setGeometry(QRect(100, 270, 80, 24));
-        btnBuscar = new QPushButton(VentanaEliminar);
-        btnBuscar->setObjectName("btnBuscar");
-        btnBuscar->setGeometry(QRect(370, 60, 80, 24));
+
+        horizontalLayout->addWidget(btnEliminar);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+        btnVolver = new QPushButton(widget);
+        btnVolver->setObjectName("btnVolver");
+
+        horizontalLayout->addWidget(btnVolver);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
 
         retranslateUi(VentanaEliminar);
 
@@ -145,9 +244,10 @@ public:
     void retranslateUi(QDialog *VentanaEliminar)
     {
         VentanaEliminar->setWindowTitle(QCoreApplication::translate("VentanaEliminar", "Dialog", nullptr));
-        label->setText(QCoreApplication::translate("VentanaEliminar", "VENTANA DE ELIMINAR SERIE", nullptr));
-        label_2->setText(QCoreApplication::translate("VentanaEliminar", "Nombre:", nullptr));
-        txtNombre->setPlaceholderText(QCoreApplication::translate("VentanaEliminar", "Nombre de la serie a eliminar", nullptr));
+        label->setText(QCoreApplication::translate("VentanaEliminar", "--------- ELIMINAR SERIE ---------", nullptr));
+        label_2->setText(QCoreApplication::translate("VentanaEliminar", "Id:", nullptr));
+        txtId->setPlaceholderText(QCoreApplication::translate("VentanaEliminar", "Id de la serie a eliminar", nullptr));
+        btnBuscar->setText(QCoreApplication::translate("VentanaEliminar", "Buscar", nullptr));
         QTableWidgetItem *___qtablewidgetitem = tablaEliminar->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QCoreApplication::translate("VentanaEliminar", "Nombre Serie", nullptr));
         QTableWidgetItem *___qtablewidgetitem1 = tablaEliminar->horizontalHeaderItem(1);
@@ -162,9 +262,8 @@ public:
         ___qtablewidgetitem5->setText(QCoreApplication::translate("VentanaEliminar", "Temporada actual", nullptr));
         QTableWidgetItem *___qtablewidgetitem6 = tablaEliminar->horizontalHeaderItem(6);
         ___qtablewidgetitem6->setText(QCoreApplication::translate("VentanaEliminar", "Episodio actual", nullptr));
-        btnVolver->setText(QCoreApplication::translate("VentanaEliminar", "Volver", nullptr));
         btnEliminar->setText(QCoreApplication::translate("VentanaEliminar", "Eliminar", nullptr));
-        btnBuscar->setText(QCoreApplication::translate("VentanaEliminar", "Buscar", nullptr));
+        btnVolver->setText(QCoreApplication::translate("VentanaEliminar", "Volver", nullptr));
     } // retranslateUi
 
 };

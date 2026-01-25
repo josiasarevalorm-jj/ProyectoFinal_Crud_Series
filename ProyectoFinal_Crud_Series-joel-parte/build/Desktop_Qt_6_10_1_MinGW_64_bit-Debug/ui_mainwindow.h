@@ -16,6 +16,7 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -24,12 +25,14 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
+    QWidget *layoutWidget;
+    QVBoxLayout *verticalLayout;
+    QLabel *label;
     QPushButton *btnAgregar;
     QPushButton *btnMostrar;
-    QPushButton *btnActualizar;
     QPushButton *btnBuscar;
+    QPushButton *btnActualizar;
     QPushButton *btnEliminar;
-    QLabel *label;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -37,120 +40,176 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(317, 227);
-        QPalette palette;
-        QBrush brush(QColor(255, 255, 255, 255));
-        brush.setStyle(Qt::BrushStyle::SolidPattern);
-        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::Base, brush);
-        QBrush brush1(QColor(0, 0, 0, 255));
-        brush1.setStyle(Qt::BrushStyle::SolidPattern);
-        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::Window, brush1);
-        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::Base, brush);
-        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::Window, brush1);
-        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Base, brush1);
-        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Window, brush1);
-        MainWindow->setPalette(palette);
-        MainWindow->setStyleSheet(QString::fromUtf8("QFrame {\n"
-"    background-color: rgb(61, 61, 61);\n"
+        MainWindow->resize(502, 438);
+        MainWindow->setStyleSheet(QString::fromUtf8("/* ===== FONDO GENERAL ===== */\n"
+"QMainWindow {\n"
+"    background: qlineargradient(\n"
+"        x1:0, y1:0,\n"
+"        x2:0, y2:1,\n"
+"        stop:0 rgb(15, 15, 15),\n"
+"        stop:1 rgb(35, 35, 35)\n"
+"    );\n"
 "}\n"
 "\n"
-"/* ---------- QLabel ---------- */\n"
+"/* ===== TITULO (GESTOR DE SERIES) ===== */\n"
+"QLabel#label {\n"
+"    background-color: rgb(229, 9, 20); /* Rojo Netflix */\n"
+"    color: white;\n"
+"    font: bold 18pt \"Arial Black\";\n"
+"    letter-spacing: 2px;\n"
+"    padding: 12px;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"/* ===== LABELS NORMALES ===== */\n"
 "QLabel {\n"
-"    font: 87 12pt \"Arial Black\";\n"
-"    background-color: #000000;\n"
-"    color: rgb(0, 206, 151);\n"
-"    border: 0px;\n"
+"    color: rgb(220, 220, 220);\n"
+"    font: bold 11pt \"Arial\";\n"
 "}\n"
 "\n"
-"/* ---------- QLineEdit ---------- */\n"
-"QLineEdit {\n"
-"    border: 0px;\n"
-"    border-bottom: 2px solid rgb(61, 61, 61);\n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(0, 0, 0);\n"
-"    font: 75 12pt \"Times New Roman\";\n"
-"}\n"
-"\n"
-"/* ---------- QPushButton ---------- */\n"
+"/* ===== BOTONES ===== */\n"
 "QPushButton {\n"
-"    background-color: rgb(61, 61, 61);\n"
-"    border-radius: 15px;\n"
-"    color: rgb(255, 255, 255);\n"
-"    font: 77 10pt \"Arial Black\";\n"
+"    background-color: rgb(40, 40, 40);\n"
+"    color: white;\n"
+"    font: bold 11pt \"Arial Black\";\n"
+"    border-radius: 18px;\n"
+"    padding: 10px;\n"
+"    text-align: center;\n"
+"    padding-left: 20px;\n"
 "}\n"
 "\n"
+"/* ===== BOTONES HOVER ===== */\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(0, 206, 151);\n"
-"    color: rgb(0, 0, 0);\n"
+"    background-color: rgb(229, 9, 20);\n"
+"  "
+                        "  color: white;\n"
 "}\n"
 "\n"
-"/* ---------- QTableWidget ---------- */\n"
+"/* ===== BOTONES PRESIONADOS ===== */\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(180, 8, 16);\n"
+"}\n"
+"\n"
+"/* ===== INPUTS ===== */\n"
+"QLineEdit {\n"
+"    background-color: rgb(30, 30, 30);\n"
+"    color: white;\n"
+"    border: 1px solid rgb(80, 80, 80);\n"
+"    border-radius: 10px;\n"
+"    padding: 6px;\n"
+"}\n"
+"\n"
+"/* ===== TABLAS ===== */\n"
 "QTableWidget {\n"
-"    background-color: rgb(255, 255, 255);\n"
-"    color: rgb(0, 0, 0);\n"
-"    gridline-color: rgb(0, 206, 151);\n"
-" "
-                        "   font-size: 12pt;\n"
+"    background-color: rgb(20, 20, 20);\n"
+"    color: white;\n"
+"    gridline-color: rgb(80, 80, 80);\n"
 "}\n"
 "\n"
-"/* ---------- Encabezados ---------- */\n"
 "QHeaderView::section {\n"
-"    background-color: rgb(0, 206, 151);\n"
-"    border: 1px solid rgb(0, 0, 0);\n"
-"    font-size: 12pt;\n"
-"}\n"
-"\n"
-"/* ---------- Bot\303\263n esquina tabla ---------- */\n"
-"QTableWidget QTableCornerButton::section {\n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 1px solid rgb(0, 206, 151);\n"
+"    background-color: rgb(229, 9, 20);\n"
+"    color: white;\n"
+"    font: bold 10pt \"Arial\";\n"
+"    padding: 6px;\n"
+"    border: none;\n"
 "}"));
         MainWindow->setDocumentMode(false);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        btnAgregar = new QPushButton(centralwidget);
-        btnAgregar->setObjectName("btnAgregar");
-        btnAgregar->setGeometry(QRect(22, 22, 80, 24));
-        btnAgregar->setStyleSheet(QString::fromUtf8("color: white;\n"
-"background-color: #2426AE;\n"
-"font-weight: bold;\n"
-""));
-        btnMostrar = new QPushButton(centralwidget);
-        btnMostrar->setObjectName("btnMostrar");
-        btnMostrar->setGeometry(QRect(22, 52, 80, 24));
-        btnMostrar->setStyleSheet(QString::fromUtf8("color: white;\n"
-"background-color: #2426AE;\n"
-"font-weight: bold;\n"
-""));
-        btnActualizar = new QPushButton(centralwidget);
-        btnActualizar->setObjectName("btnActualizar");
-        btnActualizar->setGeometry(QRect(22, 82, 80, 24));
-        btnActualizar->setStyleSheet(QString::fromUtf8("color: white;\n"
-"background-color: #2426AE;\n"
-"font-weight: bold;\n"
-""));
-        btnBuscar = new QPushButton(centralwidget);
-        btnBuscar->setObjectName("btnBuscar");
-        btnBuscar->setGeometry(QRect(22, 112, 80, 24));
-        btnBuscar->setStyleSheet(QString::fromUtf8("color: white;\n"
-"background-color: #2426AE;\n"
-"font-weight: bold;\n"
-""));
-        btnEliminar = new QPushButton(centralwidget);
-        btnEliminar->setObjectName("btnEliminar");
-        btnEliminar->setGeometry(QRect(22, 142, 80, 24));
-        btnEliminar->setStyleSheet(QString::fromUtf8("color: white;\n"
-"background-color: #2426AE;\n"
-"font-weight: bold;\n"
-""));
-        label = new QLabel(centralwidget);
+        layoutWidget = new QWidget(centralwidget);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(30, 20, 441, 321));
+        verticalLayout = new QVBoxLayout(layoutWidget);
+        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        label = new QLabel(layoutWidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(130, 0, 161, 21));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Arial Black")});
+        font.setPointSize(18);
+        font.setBold(true);
+        font.setItalic(false);
+        label->setFont(font);
+        label->setAlignment(Qt::AlignmentFlag::AlignCenter);
         label->setWordWrap(true);
+
+        verticalLayout->addWidget(label);
+
+        btnAgregar = new QPushButton(layoutWidget);
+        btnAgregar->setObjectName("btnAgregar");
+        btnAgregar->setMinimumSize(QSize(0, 0));
+        QPalette palette;
+        QBrush brush(QColor(255, 255, 255, 255));
+        brush.setStyle(Qt::BrushStyle::SolidPattern);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::WindowText, brush);
+        QBrush brush1(QColor(40, 40, 40, 255));
+        brush1.setStyle(Qt::BrushStyle::SolidPattern);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::Button, brush1);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::Text, brush);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::ButtonText, brush);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::Base, brush1);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::Window, brush1);
+        QBrush brush2(QColor(39, 191, 115, 255));
+        brush2.setStyle(Qt::BrushStyle::SolidPattern);
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::Highlight, brush2);
+        QBrush brush3(QColor(255, 255, 255, 128));
+        brush3.setStyle(Qt::BrushStyle::SolidPattern);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::ColorGroup::Active, QPalette::ColorRole::PlaceholderText, brush3);
+#endif
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::WindowText, brush);
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::Button, brush1);
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::Text, brush);
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::ButtonText, brush);
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::Base, brush1);
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::Window, brush1);
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::Highlight, brush2);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::ColorGroup::Inactive, QPalette::ColorRole::PlaceholderText, brush3);
+#endif
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::WindowText, brush);
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Button, brush1);
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Text, brush);
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::ButtonText, brush);
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Base, brush1);
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Window, brush1);
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::Highlight, brush2);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::ColorGroup::Disabled, QPalette::ColorRole::PlaceholderText, brush3);
+#endif
+        btnAgregar->setPalette(palette);
+        btnAgregar->setStyleSheet(QString::fromUtf8(""));
+
+        verticalLayout->addWidget(btnAgregar);
+
+        btnMostrar = new QPushButton(layoutWidget);
+        btnMostrar->setObjectName("btnMostrar");
+        btnMostrar->setStyleSheet(QString::fromUtf8(""));
+
+        verticalLayout->addWidget(btnMostrar);
+
+        btnBuscar = new QPushButton(layoutWidget);
+        btnBuscar->setObjectName("btnBuscar");
+        btnBuscar->setStyleSheet(QString::fromUtf8(""));
+
+        verticalLayout->addWidget(btnBuscar);
+
+        btnActualizar = new QPushButton(layoutWidget);
+        btnActualizar->setObjectName("btnActualizar");
+        btnActualizar->setStyleSheet(QString::fromUtf8(""));
+
+        verticalLayout->addWidget(btnActualizar);
+
+        btnEliminar = new QPushButton(layoutWidget);
+        btnEliminar->setObjectName("btnEliminar");
+        btnEliminar->setStyleSheet(QString::fromUtf8(""));
+
+        verticalLayout->addWidget(btnEliminar);
+
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 317, 21));
+        menubar->setGeometry(QRect(0, 0, 502, 26));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -164,12 +223,12 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "GESTION DE SERIES", nullptr));
         btnAgregar->setText(QCoreApplication::translate("MainWindow", "Agregar", nullptr));
         btnMostrar->setText(QCoreApplication::translate("MainWindow", "Mostrar", nullptr));
-        btnActualizar->setText(QCoreApplication::translate("MainWindow", "Actualizar", nullptr));
         btnBuscar->setText(QCoreApplication::translate("MainWindow", "Buscar", nullptr));
+        btnActualizar->setText(QCoreApplication::translate("MainWindow", "Actualizar", nullptr));
         btnEliminar->setText(QCoreApplication::translate("MainWindow", "Eliminar", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "GESTION DE SERIES", nullptr));
     } // retranslateUi
 
 };

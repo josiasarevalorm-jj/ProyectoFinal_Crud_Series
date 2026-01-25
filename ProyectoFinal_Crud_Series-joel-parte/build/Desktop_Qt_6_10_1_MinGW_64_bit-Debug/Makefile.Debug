@@ -347,7 +347,7 @@ debug/moc_mainwindow.cpp: ../../mainwindow.h \
 		C:/Qt/6.10.1/mingw_64/include/QtCore/QString \
 		debug/moc_predefs.h \
 		C:/Qt/6.10.1/mingw_64/bin/moc.exe
-	C:\Qt\6.10.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/PC Master/Documents/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.10.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/PC Master/Documents/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte" -IC:/Qt/6.10.1/mingw_64/include -IC:/Qt/6.10.1/mingw_64/include/QtWidgets -IC:/Qt/6.10.1/mingw_64/include/QtGui -IC:/Qt/6.10.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\mainwindow.h -o debug\moc_mainwindow.cpp
+	C:\Qt\6.10.1\mingw_64\bin\moc.exe $(DEFINES) --include "D:/POLITECNICA/2DO SEMESTRE/PROGRAMACION/PROYECTO/QT FRAMEWORK/proyecto/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.10.1/mingw_64/mkspecs/win32-g++ -I"D:/POLITECNICA/2DO SEMESTRE/PROGRAMACION/PROYECTO/QT FRAMEWORK/proyecto/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte" -IC:/Qt/6.10.1/mingw_64/include -IC:/Qt/6.10.1/mingw_64/include/QtWidgets -IC:/Qt/6.10.1/mingw_64/include/QtGui -IC:/Qt/6.10.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\mainwindow.h -o debug\moc_mainwindow.cpp
 
 debug/moc_ventanaactualizar.cpp: ../../ventanaactualizar.h \
 		C:/Qt/6.10.1/mingw_64/include/QtWidgets/QDialog \
@@ -553,7 +553,7 @@ debug/moc_ventanaactualizar.cpp: ../../ventanaactualizar.h \
 		C:/Qt/6.10.1/mingw_64/include/QtCore/QString \
 		debug/moc_predefs.h \
 		C:/Qt/6.10.1/mingw_64/bin/moc.exe
-	C:\Qt\6.10.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/PC Master/Documents/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.10.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/PC Master/Documents/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte" -IC:/Qt/6.10.1/mingw_64/include -IC:/Qt/6.10.1/mingw_64/include/QtWidgets -IC:/Qt/6.10.1/mingw_64/include/QtGui -IC:/Qt/6.10.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\ventanaactualizar.h -o debug\moc_ventanaactualizar.cpp
+	C:\Qt\6.10.1\mingw_64\bin\moc.exe $(DEFINES) --include "D:/POLITECNICA/2DO SEMESTRE/PROGRAMACION/PROYECTO/QT FRAMEWORK/proyecto/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.10.1/mingw_64/mkspecs/win32-g++ -I"D:/POLITECNICA/2DO SEMESTRE/PROGRAMACION/PROYECTO/QT FRAMEWORK/proyecto/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte" -IC:/Qt/6.10.1/mingw_64/include -IC:/Qt/6.10.1/mingw_64/include/QtWidgets -IC:/Qt/6.10.1/mingw_64/include/QtGui -IC:/Qt/6.10.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\ventanaactualizar.h -o debug\moc_ventanaactualizar.cpp
 
 debug/moc_ventanaagregar.cpp: ../../ventanaagregar.h \
 		C:/Qt/6.10.1/mingw_64/include/QtWidgets/QDialog \
@@ -760,7 +760,7 @@ debug/moc_ventanaagregar.cpp: ../../ventanaagregar.h \
 		C:/Qt/6.10.1/mingw_64/include/QtCore/QString \
 		debug/moc_predefs.h \
 		C:/Qt/6.10.1/mingw_64/bin/moc.exe
-	C:\Qt\6.10.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/PC Master/Documents/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.10.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/PC Master/Documents/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte" -IC:/Qt/6.10.1/mingw_64/include -IC:/Qt/6.10.1/mingw_64/include/QtWidgets -IC:/Qt/6.10.1/mingw_64/include/QtGui -IC:/Qt/6.10.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\ventanaagregar.h -o debug\moc_ventanaagregar.cpp
+	C:\Qt\6.10.1\mingw_64\bin\moc.exe $(DEFINES) --include "D:/POLITECNICA/2DO SEMESTRE/PROGRAMACION/PROYECTO/QT FRAMEWORK/proyecto/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.10.1/mingw_64/mkspecs/win32-g++ -I"D:/POLITECNICA/2DO SEMESTRE/PROGRAMACION/PROYECTO/QT FRAMEWORK/proyecto/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte" -IC:/Qt/6.10.1/mingw_64/include -IC:/Qt/6.10.1/mingw_64/include/QtWidgets -IC:/Qt/6.10.1/mingw_64/include/QtGui -IC:/Qt/6.10.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\ventanaagregar.h -o debug\moc_ventanaagregar.cpp
 
 debug/moc_ventanabuscar.cpp: ../../ventanabuscar.h \
 		C:/Qt/6.10.1/mingw_64/include/QtWidgets/QDialog \
@@ -962,9 +962,11 @@ debug/moc_ventanabuscar.cpp: ../../ventanabuscar.h \
 		C:/Qt/6.10.1/mingw_64/include/QtGui/qinputmethod.h \
 		C:/Qt/6.10.1/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.10.1/mingw_64/include/QtGui/qguiapplication_platform.h \
+		../../datos.h \
+		C:/Qt/6.10.1/mingw_64/include/QtCore/QString \
 		debug/moc_predefs.h \
 		C:/Qt/6.10.1/mingw_64/bin/moc.exe
-	C:\Qt\6.10.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/PC Master/Documents/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.10.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/PC Master/Documents/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte" -IC:/Qt/6.10.1/mingw_64/include -IC:/Qt/6.10.1/mingw_64/include/QtWidgets -IC:/Qt/6.10.1/mingw_64/include/QtGui -IC:/Qt/6.10.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\ventanabuscar.h -o debug\moc_ventanabuscar.cpp
+	C:\Qt\6.10.1\mingw_64\bin\moc.exe $(DEFINES) --include "D:/POLITECNICA/2DO SEMESTRE/PROGRAMACION/PROYECTO/QT FRAMEWORK/proyecto/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.10.1/mingw_64/mkspecs/win32-g++ -I"D:/POLITECNICA/2DO SEMESTRE/PROGRAMACION/PROYECTO/QT FRAMEWORK/proyecto/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte" -IC:/Qt/6.10.1/mingw_64/include -IC:/Qt/6.10.1/mingw_64/include/QtWidgets -IC:/Qt/6.10.1/mingw_64/include/QtGui -IC:/Qt/6.10.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\ventanabuscar.h -o debug\moc_ventanabuscar.cpp
 
 debug/moc_ventanaeliminar.cpp: ../../ventanaeliminar.h \
 		C:/Qt/6.10.1/mingw_64/include/QtWidgets/QDialog \
@@ -1166,9 +1168,11 @@ debug/moc_ventanaeliminar.cpp: ../../ventanaeliminar.h \
 		C:/Qt/6.10.1/mingw_64/include/QtGui/qinputmethod.h \
 		C:/Qt/6.10.1/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.10.1/mingw_64/include/QtGui/qguiapplication_platform.h \
+		../../datos.h \
+		C:/Qt/6.10.1/mingw_64/include/QtCore/QString \
 		debug/moc_predefs.h \
 		C:/Qt/6.10.1/mingw_64/bin/moc.exe
-	C:\Qt\6.10.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/PC Master/Documents/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.10.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/PC Master/Documents/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte" -IC:/Qt/6.10.1/mingw_64/include -IC:/Qt/6.10.1/mingw_64/include/QtWidgets -IC:/Qt/6.10.1/mingw_64/include/QtGui -IC:/Qt/6.10.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\ventanaeliminar.h -o debug\moc_ventanaeliminar.cpp
+	C:\Qt\6.10.1\mingw_64\bin\moc.exe $(DEFINES) --include "D:/POLITECNICA/2DO SEMESTRE/PROGRAMACION/PROYECTO/QT FRAMEWORK/proyecto/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.10.1/mingw_64/mkspecs/win32-g++ -I"D:/POLITECNICA/2DO SEMESTRE/PROGRAMACION/PROYECTO/QT FRAMEWORK/proyecto/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte" -IC:/Qt/6.10.1/mingw_64/include -IC:/Qt/6.10.1/mingw_64/include/QtWidgets -IC:/Qt/6.10.1/mingw_64/include/QtGui -IC:/Qt/6.10.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\ventanaeliminar.h -o debug\moc_ventanaeliminar.cpp
 
 debug/moc_ventanamostrar.cpp: ../../ventanamostrar.h \
 		C:/Qt/6.10.1/mingw_64/include/QtWidgets/QDialog \
@@ -1372,7 +1376,7 @@ debug/moc_ventanamostrar.cpp: ../../ventanamostrar.h \
 		C:/Qt/6.10.1/mingw_64/include/QtGui/qguiapplication_platform.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.10.1/mingw_64/bin/moc.exe
-	C:\Qt\6.10.1\mingw_64\bin\moc.exe $(DEFINES) --include "C:/Users/PC Master/Documents/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.10.1/mingw_64/mkspecs/win32-g++ -I"C:/Users/PC Master/Documents/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte" -IC:/Qt/6.10.1/mingw_64/include -IC:/Qt/6.10.1/mingw_64/include/QtWidgets -IC:/Qt/6.10.1/mingw_64/include/QtGui -IC:/Qt/6.10.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\ventanamostrar.h -o debug\moc_ventanamostrar.cpp
+	C:\Qt\6.10.1\mingw_64\bin\moc.exe $(DEFINES) --include "D:/POLITECNICA/2DO SEMESTRE/PROGRAMACION/PROYECTO/QT FRAMEWORK/proyecto/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.10.1/mingw_64/mkspecs/win32-g++ -I"D:/POLITECNICA/2DO SEMESTRE/PROGRAMACION/PROYECTO/QT FRAMEWORK/proyecto/ProyectoFinal_Crud_Series-joel-parte/ProyectoFinal_Crud_Series-joel-parte" -IC:/Qt/6.10.1/mingw_64/include -IC:/Qt/6.10.1/mingw_64/include/QtWidgets -IC:/Qt/6.10.1/mingw_64/include/QtGui -IC:/Qt/6.10.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++ -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include -IC:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed -IC:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include ..\..\ventanamostrar.h -o debug\moc_ventanamostrar.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -2574,7 +2578,12 @@ debug/ventanabuscar.o: ../../ventanabuscar.cpp ../../ventanabuscar.h \
 		C:/Qt/6.10.1/mingw_64/include/QtGui/qinputmethod.h \
 		C:/Qt/6.10.1/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.10.1/mingw_64/include/QtGui/qguiapplication_platform.h \
-		ui_ventanabuscar.h
+		../../datos.h \
+		C:/Qt/6.10.1/mingw_64/include/QtCore/QString \
+		ui_ventanabuscar.h \
+		C:/Qt/6.10.1/mingw_64/include/QtWidgets/QMessageBox \
+		C:/Qt/6.10.1/mingw_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/6.10.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\ventanabuscar.o ..\..\ventanabuscar.cpp
 
 debug/ventanaeliminar.o: ../../ventanaeliminar.cpp ../../ventanaeliminar.h \
@@ -2777,7 +2786,12 @@ debug/ventanaeliminar.o: ../../ventanaeliminar.cpp ../../ventanaeliminar.h \
 		C:/Qt/6.10.1/mingw_64/include/QtGui/qinputmethod.h \
 		C:/Qt/6.10.1/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.10.1/mingw_64/include/QtGui/qguiapplication_platform.h \
-		ui_ventanaeliminar.h
+		../../datos.h \
+		C:/Qt/6.10.1/mingw_64/include/QtCore/QString \
+		ui_ventanaeliminar.h \
+		C:/Qt/6.10.1/mingw_64/include/QtWidgets/QMessageBox \
+		C:/Qt/6.10.1/mingw_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/6.10.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\ventanaeliminar.o ..\..\ventanaeliminar.cpp
 
 debug/ventanamostrar.o: ../../ventanamostrar.cpp ../../ventanamostrar.h \
