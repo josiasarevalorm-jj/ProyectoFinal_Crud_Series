@@ -12,6 +12,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    listaSeries=datos::cargarDesdeArchivo();
 }
 
 MainWindow::~MainWindow()
@@ -36,8 +38,8 @@ void MainWindow::on_btnMostrar_clicked()
 
 void MainWindow::on_btnActualizar_clicked()
 {
-    VentanaActualizar ventanaActualizar;
-    ventanaActualizar.exec();
+    VentanaActualizar v(listaSeries,this);
+    v.exec();
 }
 
 

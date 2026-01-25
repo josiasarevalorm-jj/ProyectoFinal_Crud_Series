@@ -54,6 +54,7 @@ void datos::guardarEnArchivo(const datos &d){
     archivo.close();
 }
 
+
 void datos::setId(int id){
     this->Id=id;
 }
@@ -78,3 +79,56 @@ void datos::settem(int tem){
 void datos::setep(int ep){
     this->ep=ep;
 }
+
+QList<datos> datos::cargarDesdeArchivo(){
+    QList<datos> lista;
+    QFile archivo("datosSeries.txt");
+    if(!archivo.open(QIODevice::ReadOnly | QIODevice::Text))
+        return lista;
+    QTextStream in (&archivo);
+    while(!in.atEnd()){
+        QString linea=in.readLine();
+        QStringList d=linea.split(";");
+        if (d.size()==8){
+            datos serie(
+                d[0].toInt(),
+                d[1],
+                d[2],
+                d[3].toInt(),
+                d[4].toInt(),
+                d[5],
+                d[6].toInt(),
+                d[7].toInt()
+                );
+            lista.append(serie);
+
+        }
+    }
+    archivo.close();
+    return lista;
+}
+
+void datos::guardarTodoEnArchivo(const QList<datos> &lista)
+{
+    QFile archivo("datosSeries.txt");
+
+    if (!archivo.open(QIODevice::WriteOnly | QIODevice::Text))
+        return;
+
+    QTextStream out(&archivo);
+
+    for (const datos &d : lista)
+    {
+        out << d.getId() << ";"
+            << d.getnombreSerie() << ";"
+            << d.getgenero() << ";"
+            << d.gettemTotal() << ";"
+            << d.getepTotal() << ";"
+            << d.getestado() << ";"
+            << d.gettem() << ";"
+            << d.getep() << "\n";
+    }
+
+    archivo.close();
+}
+

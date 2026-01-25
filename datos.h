@@ -2,6 +2,7 @@
 #define DATOS_H
 
 #include <QString>
+#include <QList>
 class datos
 {
 public:
@@ -24,6 +25,10 @@ public:
     int gettem() const;
     int getep() const;
     static void guardarEnArchivo(const datos &d);
+
+    static QList<datos> cargarDesdeArchivo();
+
+    static void guardarTodoEnArchivo(const QList<datos> &lista);
 private:
     int Id;
     QString nombreSerie;

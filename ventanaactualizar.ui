@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>507</width>
-    <height>243</height>
+    <height>315</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,8 +32,8 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>31</x>
-     <y>51</y>
+     <x>30</x>
+     <y>90</y>
      <width>105</width>
      <height>16</height>
     </rect>
@@ -46,7 +46,7 @@
    <property name="geometry">
     <rect>
      <x>29</x>
-     <y>142</y>
+     <y>242</y>
      <width>97</width>
      <height>16</height>
     </rect>
@@ -59,7 +59,7 @@
    <property name="geometry">
     <rect>
      <x>29</x>
-     <y>172</y>
+     <y>272</y>
      <width>86</width>
      <height>16</height>
     </rect>
@@ -71,21 +71,21 @@
   <widget class="QLineEdit" name="txtNombre">
    <property name="geometry">
     <rect>
-     <x>161</x>
-     <y>51</y>
+     <x>180</x>
+     <y>80</y>
      <width>181</width>
      <height>24</height>
     </rect>
    </property>
    <property name="placeholderText">
-    <string>Nombre de la serie a actualizar</string>
+    <string/>
    </property>
   </widget>
   <widget class="QSpinBox" name="spinTemActual">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>143</y>
+     <x>180</x>
+     <y>243</y>
      <width>39</width>
      <height>21</height>
     </rect>
@@ -95,7 +95,7 @@
    <property name="geometry">
     <rect>
      <x>29</x>
-     <y>112</y>
+     <y>212</y>
      <width>38</width>
      <height>16</height>
     </rect>
@@ -107,8 +107,8 @@
   <widget class="QComboBox" name="cmbEstado">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>113</y>
+     <x>180</x>
+     <y>213</y>
      <width>141</width>
      <height>24</height>
     </rect>
@@ -138,8 +138,8 @@
   <widget class="QSpinBox" name="spinEpActual">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>170</y>
+     <x>180</x>
+     <y>270</y>
      <width>39</width>
      <height>21</height>
     </rect>
@@ -148,8 +148,8 @@
   <widget class="QPushButton" name="btnActualizar">
    <property name="geometry">
     <rect>
-     <x>370</x>
-     <y>140</y>
+     <x>380</x>
+     <y>220</y>
      <width>80</width>
      <height>24</height>
     </rect>
@@ -174,14 +174,112 @@
   <widget class="QPushButton" name="btnVover">
    <property name="geometry">
     <rect>
-     <x>370</x>
-     <y>180</y>
+     <x>380</x>
+     <y>250</y>
      <width>80</width>
      <height>24</height>
     </rect>
    </property>
    <property name="text">
     <string>Volver</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtId">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>50</y>
+     <width>181</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Id de la serie a buscar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>105</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Id:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>120</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Genero:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>150</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Temporadas totales:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>180</y>
+     <width>151</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Episodios por temporada:</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinTemTotal">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>150</y>
+     <width>39</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinEpTotal">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>180</y>
+     <width>39</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtGenero">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>110</y>
+     <width>181</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string/>
    </property>
   </widget>
  </widget>

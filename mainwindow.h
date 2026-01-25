@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QList>
+#include "datos.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -30,6 +32,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    QList<datos> listaSeries;
 
 };
 #endif // MAINWINDOW_H
