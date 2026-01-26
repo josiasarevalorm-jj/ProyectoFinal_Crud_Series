@@ -3,6 +3,7 @@
 #include "datos.h"
 #include <QMessageBox>
 
+
 VentanaAgregar::VentanaAgregar(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::VentanaAgregar)
@@ -80,10 +81,38 @@ void VentanaAgregar::on_cmbEstado_currentTextChanged(const QString &estado)
     }
 }
 
+bool VentanaAgregar::validarDatos()
+{
+    QString nombreSerie=ui->txtNombre->text();
+    QString genero=ui->txtGenero->text();
+    QString estado=ui->cmbEstado->currentText();
+    if(nombreSerie.isEmpty() || genero.isEmpty() || estado.isEmpty()){
+        QMessageBox::warning(
+            this,
+            "Error de datos",
+            "Los campos estan vacios"
+            );
+        return false;
+    }
+    return true;
+}
+
+
 void VentanaAgregar::on_btnGuardar_clicked()
 {
     if (!validarRangoTemporadas()) {
         return; // no guarda
+    }
+    if(!validarDatos()){
+        return;
+    }
+    int id = ui->spinId->value();
+
+    if (datos::existeId(id)) {
+        QMessageBox::warning(this,
+                             "ID repetido",
+                             "El ID ingresado ya existe. Ingrese otro.");
+        return;
     }
     datos d(obtenerSerie());
     datos::guardarEnArchivo(d);

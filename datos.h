@@ -24,6 +24,8 @@ public:
     QString getestado() const;
     int gettem() const;
     int getep() const;
+    static bool existeId(int id);
+
     static void guardarEnArchivo(const datos &d);
 
     static QList<datos> cargarDesdeArchivo();

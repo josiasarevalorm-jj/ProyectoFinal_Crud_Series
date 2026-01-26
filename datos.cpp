@@ -38,6 +38,29 @@ int datos::getep() const{
     return ep;
 }
 
+bool datos::existeId(int id)
+{
+    QFile file("datosSeries.txt");
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+        return false;
+
+    QTextStream in(&file);
+
+    while (!in.atEnd()) {
+        QString linea = in.readLine();
+        QStringList partes = linea.split(";");
+
+        if (partes.size() > 0 && partes[0].toInt() == id) {
+            file.close();
+            return true;
+        }
+    }
+
+    file.close();
+    return false;
+}
+
 void datos::guardarEnArchivo(const datos &d){
     QFile archivo("datosSeries.txt");
     if(!archivo.open(QIODevice::Append | QIODevice::Text))

@@ -29,6 +29,7 @@ private slots:
 private:
     Ui::VentanaAgregar *ui;
     bool validarRangoTemporadas();
+    bool validarDatos();
 };
 
 #endif // VENTANAAGREGAR_H
